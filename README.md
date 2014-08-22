@@ -24,6 +24,14 @@ facades:
 </pre>
 4. Restart app, go to <pre>/endpoints/one</pre> and observe as the output of the mentioned actions is aggregated into this one.
 
+Optionally, you can have an initializer:
+<pre lang='ruby'>
+MonomythEngine.configure do |c|
+  c.facade_file = 'config/facades.yml'
+  c.default_format = :json # not really used
+end
+</pre>
+
 **DO NOT USE THIS CODE IN PRODUCTION**. It's not even tested, and is just a hack to learn more about Rails actions and routes!!!!!11
 
 Developed as a hack-day toy for a hack day at New Bamboo.
