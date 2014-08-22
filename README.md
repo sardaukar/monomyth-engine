@@ -31,8 +31,16 @@ facades:
 
 The config file is re-parsed on every endpoint hit, so no need to reload the app for changes to occur.
 
+Optionally, you can have an initializer:
+<pre lang='ruby'>
+MonomythEngine.configure do |c|
+  c.facade_file = 'config/facades.yml'
+  c.default_format = :json # not really used
+end
+</pre>
+
 **DO NOT USE THIS CODE IN PRODUCTION**. It's not even tested, and is just a hack to learn more about Rails actions and routes!!!!!11
 
-Developed as a hack-day toy for a hack day at New Bamboo.
+Developed as a hack-day toy for a hack day at [New Bamboo](http://new-bamboo.co.uk).
 
 This project rocks and uses MIT-LICENSE.
