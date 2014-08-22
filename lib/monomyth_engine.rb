@@ -11,7 +11,7 @@ module MonomythEngine
   end
 
   def self.facades
-    @facades ||= Loader.new.facades
+    Loader.new.facades
   end
 
 end
